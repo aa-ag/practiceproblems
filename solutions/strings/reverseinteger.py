@@ -1,16 +1,14 @@
 class Solution:    
     def reverse(self, x: int) -> int:
-        final = int(str(x).replace("-","")[::-1])
-        high = 2147483648
-        low = -2147483648
+        high = -(pow(2, 31))
+        low = pow(2, 31) -1
         if x < 0:
-            negative = final * -1
-            if negative < low or negative > high:
+            y = -1 * int(str(x).replace('-', '')[::-1])
+            if y <= high:
                 return 0
-            else:
-                return negative
+            return y
         else:
-            if final < low or final > high:
+            y = int(str(x)[::-1])
+            if y >= low:
                 return 0
-            else:
-                return final
+            return y

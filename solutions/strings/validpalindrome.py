@@ -1,11 +1,11 @@
-def isPalindrome(self, s: str) -> bool:
+def isPalindrome(s):
     '''
         (1) remove all non-alphanumeric characters
         (2) check if s == s.reversed()
         (3) if s is a white space, return true
     '''
     import re
-    clean = re.sub('W+', '', s)
+    clean = re.sub('\W', '', s.lower())
     print(clean)
 
 isPalindrome("A man, a plan, a canal: Panama")

@@ -9,8 +9,8 @@ def isPalindrome(s):
 
     import re
     clean = re.sub('\W', '', s.lower())
-    print(clean)
+    return clean == clean[::-1]
 
-isPalindrome("A man, a plan, a canal: Panama")
-isPalindrome("race a car")
-isPalindrome(" ")
+print(isPalindrome("A man, a plan, a canal: Panama"))
+print(isPalindrome("race a car"))
+print(isPalindrome(" "))

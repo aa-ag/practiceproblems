@@ -4,6 +4,9 @@ def isPalindrome(s):
         (2) check if s == s.reversed()
         (3) if s is a white space, return true
     '''
+    if s == ' ':
+        return True
+
     import re
     clean = re.sub('\W', '', s.lower())
     print(clean)

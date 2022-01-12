@@ -8,9 +8,11 @@ def isPalindrome(s):
         return True
 
     import re
-    clean = re.sub('\W', '', s.lower())
+    clean = re.sub('[^a-zA-Z0-9]|\_', '', s.lower())
+    print(clean)
     return clean == clean[::-1]
 
 print(isPalindrome("A man, a plan, a canal: Panama"))
-print(isPalindrome("race a car"))
-print(isPalindrome(" "))
+# print(isPalindrome("race a car"))
+# print(isPalindrome(" "))
+print(isPalindrome("ab_a"))

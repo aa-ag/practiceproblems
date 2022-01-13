@@ -6,7 +6,8 @@ def myAtoi(s):
      - Check if the next character (if not already at the end of the string) 
         is '-' or '+'. Read this character in if it is either. 
     '''
-    within = [-(pow(2, 31)), pow(2, 31) -1]
+    low = -(pow(2, 31))
+    high = pow(2, 31) -1
 
     s = s.lstrip(' ')
 
@@ -25,9 +26,13 @@ def myAtoi(s):
         else:
             nums += i
     
-    if is_negative == True:
+    integer = int(nums)
+    if is_negative == True and integer >= low:
         return int(nums) * -1
-    return int(nums)
+    elif is_negative == False and integer <= high:
+        return int(nums)
+    else:
+        return 0
 
 
 print(myAtoi("   -42"))

@@ -1,3 +1,5 @@
+import re
+
 def myAtoi(s):
     '''
      - Read in and ignore any leading whitespace.
@@ -5,11 +7,17 @@ def myAtoi(s):
         is '-' or '+'. Read this character in if it is either. 
     '''
     within = [-(pow(2, 31)), pow(2, 31) -1]
-    
+
     s = s.lstrip(' ')
+
     if s.startswith('-'):
-        print("negative")
+        is_negative = True
     else:
-        print("positive")
+        is_negative = False
+
+    s = s.replace('-', '')
+    print(s)
+
 
 myAtoi("   -42")
+myAtoi("4193 with words")

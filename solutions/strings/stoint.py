@@ -35,5 +35,6 @@ def myAtoi(s):
         return 0
 
 
-print(myAtoi("   -42"))
-print(myAtoi("4193 with words"))
+# print(myAtoi("   -42"))
+# print(myAtoi("4193 with words"))
+print(myAtoi("words and 987"))

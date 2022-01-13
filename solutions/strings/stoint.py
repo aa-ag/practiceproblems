@@ -24,8 +24,11 @@ def myAtoi(s):
             break
         else:
             nums += i
-    print(nums)
+    
+    if is_negative == True:
+        return int(nums) * -1
+    return int(nums)
 
 
-myAtoi("   -42")
-myAtoi("4193 with words")
+print(myAtoi("   -42"))
+print(myAtoi("4193 with words"))

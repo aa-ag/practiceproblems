@@ -1,18 +1,26 @@
+import re
+
 def strStr(h: str, n: str) -> int:
-    print(h, n)
+    if n == "":
+        return 0
+    
+    try:
+        return re.search(n, h).start()
+    except:
+        return -1
 
 
 # Input: haystack = "hello", 
 # needle = "ll"
 # Output: 2
-strStr("hello", "ll")
+print(strStr("hello", "ll"))
 
 # Input: haystack = "aaaaa", 
 # needle = "bba"
 # Output: -1
-strStr("aaaaa", "bba")
+print(strStr("aaaaa", "bba"))
 
 # Input: haystack = "", 
 # needle = ""
 # Output: 0
-strStr("", "")
+print(strStr("", ""))

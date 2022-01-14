@@ -16,7 +16,7 @@ def myAtoi(s):
     else:
         is_negative = False
 
-    s = s.replace('-', '')
+    s = s.replace('-', '').replace('+', '')
     
     nums = ''
 
@@ -49,4 +49,5 @@ def myAtoi(s):
 # print(myAtoi("   -42"))
 # print(myAtoi("4193 with words"))
 # print(myAtoi("words and 987"))
-print(myAtoi("-91283472332"))
+# print(myAtoi("-91283472332"))
+print(myAtoi('+-12'))

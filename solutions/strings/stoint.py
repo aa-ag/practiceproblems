@@ -13,10 +13,12 @@ def myAtoi(s):
 
     if s.startswith('-'):
         is_negative = True
+        s = s.replace('-', '')
     else:
         is_negative = False
 
-    s = s.replace('-', '').replace('+', '')
+    if s.startswith('+'):
+        s = s.replace('+', '')
     
     nums = ''
 

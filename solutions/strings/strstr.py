@@ -3,7 +3,6 @@ import re
 def strStr(h: str, n: str) -> int:
     if n == "":
         return 0
-    
     try:
         return re.search(n, h).start()
     except:

@@ -26,12 +26,17 @@ def myAtoi(s):
         else:
             nums += i
     
-    integer = int(nums)
-    if is_negative == True and integer >= low:
-        return int(nums) * -1
-    elif is_negative == False and integer <= high:
-        return int(nums)
-    else:
+    try:
+        integer = int(nums)
+
+        if integer >= low and integer <= high:
+            if is_negative == True:
+                return int(nums) * -1
+            elif is_negative == False:
+                return int(nums)
+        else:
+            return 0
+    except:
         return 0
 
 

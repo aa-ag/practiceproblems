@@ -29,15 +29,17 @@ def myAtoi(s):
     try:
         integer = int(nums)
 
-        if integer < low:
-            integer = low
-        if integer > high:
-            integer = high
-
         if is_negative == True:
-            return int(nums) * -1
+            integer = int(integer) * -1
+            if integer <= low:
+                return low
+            return integer
+
         elif is_negative == False:
-            return int(nums)
+            integer = int(integer)
+            if integer > high:
+                return high
+            return integer
         else:
             return 0
     except:
@@ -47,4 +49,4 @@ def myAtoi(s):
 # print(myAtoi("   -42"))
 # print(myAtoi("4193 with words"))
 # print(myAtoi("words and 987"))
-print("-91283472332")
+print(myAtoi("-91283472332"))

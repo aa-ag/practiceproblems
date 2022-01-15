@@ -16,18 +16,18 @@ def countAndSay(n: int) -> str:
     count = str(i)
     say = ''
     while i < n:
-        print(f"--->{i}")
-        print(count)
+        # print(f"--->{i}")
+        # print(count)
         
         current_count = Counter(count)
-        print(current_count)
+        # print(current_count)
 
         for k, v in current_count.items():
             say = f"{nums[str(v)]} {k}" 
-            print(say)
+            # print(say)
 
         count = count + list(nums.keys())[list(nums.values()).index(nums[str(v)])]
-        print(count)
+        # print(count)
 
         i += 1
 

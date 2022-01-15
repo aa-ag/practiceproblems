@@ -12,6 +12,8 @@ nums = {
 
 ############------------ FUNCTION(S) ------------############
 def countAndSay(n: int) -> str:
+    if n == 1:
+        return '1'
     # set i to 1 since we expect to 
     # have n loops from 1 to n 
     i = 1
@@ -35,19 +37,21 @@ def countAndSay(n: int) -> str:
 
         # for each of those digits,
         # "say" how many there are
+        answer = ''
         for k, v in current_count.items():
             say = f"{nums[str(v)]} {k}" 
             # print(say)
 
-        # update the count to the digit version of 
-        # the count + the digit
-        count = count + list(nums.keys())[list(nums.values()).index(nums[str(v)])]
-        # print(count)
+            # update the count to the digit version of 
+            # the count + the digit
+            count = list(nums.keys())[list(nums.values()).index(nums[str(v)])] + k
+            answer += count
+            # print(answer)
 
         # go again
         i += 1
 
-    return count
+    return answer
 
 
 ############------------ DRIVER CODE ------------############
@@ -55,4 +59,4 @@ if __name__ == "__main__":
     # Input: n = 4
     # Output: "1211"
     # countAndSay(4)
-    print(countAndSay(4))
+    print(countAndSay(1))

@@ -4,11 +4,25 @@ nums = {
 }
 
 def countAndSay(n: int) -> str:
-    a_value = nums[n]
-    a_key = list(nums.keys())[list(nums.values()).index(nums[n])]
+    # a_value = nums[n]
+    # a_key = list(nums.keys())[list(nums.values()).index(nums[n])]
     
-    for i in range(1, n + 1):
-        print(i)
+    i = 1
+    count = ''
+    say = ''
+    while i < n + 1:
+        count = str(i)
+        print(count)
+        
+        say = f"{nums[count]} {count}" 
+        print(say)
+
+        new_count = list(nums.keys())[list(nums.values()).index(nums[count])]
+        new_say = count + new_count
+        print(new_say)
+
+        i += 1
+        break
 
 # Input: n = 4
 # Output: "1211"

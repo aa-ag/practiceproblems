@@ -11,24 +11,40 @@ nums = {
 
 
 ############------------ FUNCTION(S) ------------############
-def countAndSay(n: int) -> str:    
+def countAndSay(n: int) -> str:
+    # set i to 1 since we expect to 
+    # have n loops from 1 to n 
     i = 1
+
+    # set count initially to 1
+    # as a string to consume nums
     count = str(i)
+
+    # say step will be a string,
+    # initially empty
     say = ''
+
+    # n times do the following
     while i < n:
         # print(f"--->{i}")
         # print(count)
         
+        # count how many of each digit there is
         current_count = Counter(count)
         # print(current_count)
 
+        # for each of those digits,
+        # "say" how many there are
         for k, v in current_count.items():
             say = f"{nums[str(v)]} {k}" 
             # print(say)
 
+        # update the count to the digit version of 
+        # the count + the digit
         count = count + list(nums.keys())[list(nums.values()).index(nums[str(v)])]
         # print(count)
 
+        # go again
         i += 1
 
     return count

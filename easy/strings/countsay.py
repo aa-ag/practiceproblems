@@ -4,8 +4,9 @@ nums = {
 }
 
 def countAndSay(n: int) -> str:
-    pass
-
+    a_value = nums[n]
+    a_key = list(nums.keys())[list(nums.values()).index(nums[n])]
+    return a_value, a_key
 
 # Input: n = 4
 # Output: "1211"

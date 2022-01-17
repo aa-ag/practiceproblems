@@ -2,7 +2,11 @@ def rotate(nums: list[int], k: int) -> None:
     """
      Do not return anything, modify nums in-place instead.
     """
-    high = -(pow(2, 31))
-    low = pow(2, 31) -1
+    for i in range(k):
+        temp = nums.pop(-1)
+        nums.insert(0, temp)
+    
+    return nums
 
-    pass
+
+print(rotate([1,2,3,4,5,6,7], 3))

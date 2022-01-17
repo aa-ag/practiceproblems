@@ -1,6 +1,5 @@
 ############------------ IMPORTS ------------############
 from collections import Counter
-from lib2to3.pgen2 import driver
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
@@ -46,7 +45,7 @@ def countAndSay(n: int) -> str:
             # the count + the digit
             count = list(nums.keys())[list(nums.values()).index(nums[str(v)])] + k
             answer += count
-            # print(answer)
+            print(answer)
 
         # go again
         i += 1
@@ -59,4 +58,6 @@ if __name__ == "__main__":
     # Input: n = 4
     # Output: "1211"
     # countAndSay(4)
-    print(countAndSay(1))
+    # print(countAndSay(4))
+    print(countAndSay(5))
+    # print(countAndSay(1))

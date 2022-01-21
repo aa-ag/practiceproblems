@@ -3,7 +3,7 @@ from collections import Counter
 
 
 def containsDuplicate(nums: List[int]) -> bool:
-    return Counter(nums)
+    return set(Counter(nums).values()) != {1}
 
 
 # True

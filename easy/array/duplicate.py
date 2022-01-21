@@ -1,4 +1,6 @@
 from typing import List
+from collections import Counter
+
 
 def containsDuplicate(nums: List[int]) -> bool:
     uniques = list(set(nums))

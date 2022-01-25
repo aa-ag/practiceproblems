@@ -2,7 +2,7 @@ from typing import List
 
 
 def intersect(nums1: List[int], nums2: List[int]) -> List[int]:
-    return nums1, nums2
+    return [i for i in nums1 if i in nums2]
 
 
 # Output: [2,2]

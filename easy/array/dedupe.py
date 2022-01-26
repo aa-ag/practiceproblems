@@ -2,15 +2,19 @@ from typing import List
 
 
 def removeDuplicates(nums: List[int]) -> int:
-    k = 0
-    unique = list()
-    for num in nums:
-        if num not in unique:
-            unique.append(num)
-            k += 1
-        else:
-            continue
-    return k
+    if len(nums) == 0: 
+            return 0
+    elif len(nums) == 1: 
+        return 1
+    else:
+        left = 1
+        for right in range(1, len(nums)):
+            if nums[right - 1] == nums[right]: 
+                pass
+            else:
+                nums[left] = nums[right]
+                left += 1
+        return left
 
 
 # nums = [1,1,2]

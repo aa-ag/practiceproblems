@@ -2,11 +2,7 @@ from typing import List
 
 
 def removeDuplicates(nums: List[int]) -> int:
-    if len(nums) == 0: 
-            return 0
-    elif len(nums) == 1: 
-        return 1
-    else:
+    if len(nums) not in [0, 1]:
         left = 1
         for right in range(1, len(nums)):
             if nums[right - 1] == nums[right]: 
@@ -15,6 +11,8 @@ def removeDuplicates(nums: List[int]) -> int:
                 nums[left] = nums[right]
                 left += 1
         return left
+    return len(nums)
+        
 
 
 # nums = [1,1,2]

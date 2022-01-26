@@ -2,9 +2,9 @@ from typing import List
 
 
 def removeDuplicates(nums: List[int]) -> int:
-    pass
+    return len(list(set(nums)))
 
 
 # nums = [1,1,2]
 # output: 2, nums = [1,2,_]
-removeDuplicates([1,1,2])
+print(removeDuplicates([1,1,2]))

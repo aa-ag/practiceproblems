@@ -2,8 +2,15 @@ from typing import List
 
 
 def removeDuplicates(nums: List[int]) -> int:
-    nums = sorted(set(nums))
-    return nums
+    k = 0
+    unique = list()
+    for num in nums:
+        if num not in unique:
+            unique.append(num)
+            k += 1
+        else:
+            continue
+    return k
 
 
 # nums = [1,1,2]

@@ -2,16 +2,17 @@ from typing import List
 
 
 def removeDuplicates(nums: List[int]) -> int:
-    if len(nums) not in [0, 1]:
+    length = len(nums)
+    if length not in [0, 1]:
         left = 1
-        for right in range(1, len(nums)):
+        for right in range(1, length):
             if nums[right - 1] == nums[right]: 
-                pass
+                continue
             else:
                 nums[left] = nums[right]
                 left += 1
         return left
-    return len(nums)
+    return length
         
 
 
@@ -22,9 +23,9 @@ print(removeDuplicates([1,1,2]))
 
 # nums = [0,0,1,1,1,2,2,3,3,4]
 # output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
-print(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+# print(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
 
 
 # nums = [1,1,2]
 # output: [1, 2]
-print(removeDuplicates([1,1,2]))
+# print(removeDuplicates([1,1,2]))

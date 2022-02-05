@@ -1,5 +1,5 @@
 from typing import List
-from collections import Counter
+from collections import Counter as c
 
 def singleNumber(nums: List[int]) -> int:
     return nums

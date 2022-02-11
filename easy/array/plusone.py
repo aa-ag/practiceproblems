@@ -1,7 +1,7 @@
 from typing import List
 
 def plusOne(digits: List[int]) -> List[int]:
-    return list(digit for digit in str(sum(digits)))
+    return ''.join(str(digit) for digit in digits)
 
 
 print(plusOne([1,2,3]))

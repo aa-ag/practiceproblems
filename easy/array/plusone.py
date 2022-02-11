@@ -1,9 +1,9 @@
 from typing import List
 
 def plusOne(digits: List[int]) -> List[int]:
-    pass
+    return list(digit for digit in str(sum(digits)))
 
 
-plusOne([1,2,3])
-plusOne([4,3,2,1])
-plusOne([9])
+print(plusOne([1,2,3]))
+print(plusOne([4,3,2,1]))
+print(plusOne([9]))

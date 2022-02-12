@@ -7,6 +7,9 @@ def moveZeroes(nums: List[int]) -> None:
     if len(nums) ==  1:
         return nums
 
+    if 0 not in nums:
+        return nums
+    
     temp = 0
 
     while temp < len(nums):

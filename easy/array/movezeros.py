@@ -5,21 +5,16 @@ def moveZeroes(nums: List[int]) -> None:
      do not return anything: modify in place
     '''
     if len(nums) ==  1:
-        return nums
+            return nums
 
     if 0 not in nums:
         return nums
-    
-    temp = 0
 
-    while temp < len(nums):
-        for i in range(len(nums)):
-            if nums[i] == 0:
-                nums.pop(i)
-                nums.append(0)
-                temp += 1
-    
-    return nums
+    zeros = nums.count(0)
+
+    without_zeros = [i for i in nums if i != 0]
+    nums = without_zeros + [0] * zeros
+
 
 
 # moveZeroes([0,1,0,3,12])

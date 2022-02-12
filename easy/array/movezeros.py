@@ -15,4 +15,6 @@ def moveZeroes(nums: List[int]) -> None:
 moveZeroes([0,1,0,3,12])
 # expected output: [1,3,12,0,0]
 moveZeroes([0])
-# expected output: [0]ß
+# expected output: [0]
+moveZeroes([0,0,1])
+# expected output: [1,0,0]

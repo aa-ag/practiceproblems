@@ -4,6 +4,9 @@ def moveZeroes(nums: List[int]) -> None:
     '''
      do not return anything: modify in place
     '''
+    if len(nums) ==  1:
+        return nums
+
     temp = 0
 
     while temp < len(nums):

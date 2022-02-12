@@ -9,6 +9,16 @@ def moveZeroes(nums: List[int]) -> None:
 
     if 0 not in nums:
         return nums
+    
+    count = 0
+    
+    for i in range(len(nums)):
+        if nums[i] != 0:
+            nums[count] = nums[i]
+            count += 1
+
+    for j in range(count, len(nums)):
+        nums[j] = 0
 
     return nums
 

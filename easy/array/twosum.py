@@ -4,12 +4,14 @@ def twoSum(nums: List[int], target: int) -> List[int]:
     temp = 0
     answer = list()
 
-    while temp < target:
-        for n, num in enumerate(nums):
+    
+    for n, num in enumerate(nums):
+        if temp < target:
             temp += num
             print(temp)
             answer.append(n)
-    
+        else:
+            break
     return answer
 
 

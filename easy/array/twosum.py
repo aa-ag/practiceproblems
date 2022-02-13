@@ -1,10 +1,22 @@
 from typing import List
 
+
 def twoSum(nums: List[int], target: int) -> List[int]:
+    dictionary = dict()
+
     for i in range(len(nums)):
-        for j in range(i+1, len(nums)):
-            if nums[i] + nums[j] == target:
-                return [i, j]
+        difference = target - nums[i]
+        if difference in dictionary:
+            return [nums.index(difference), i]
+        else:
+            dictionary[nums[i]] = i
+
+
+# def twoSum(nums: List[int], target: int) -> List[int]:
+#     for i in range(len(nums)):
+#         for j in range(i+1, len(nums)):
+#             if nums[i] + nums[j] == target:
+#                 return [i, j]
 
 
 # Input: nums = [2,5,5,11], target = 10

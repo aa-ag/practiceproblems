@@ -1,17 +1,12 @@
 from typing import List
 
 def twoSum(nums: List[int], target: int) -> List[int]:
-    temp = 0
     answer = list()
 
-    
-    for n, num in enumerate(nums):
-        if temp < target:
-            temp += num
-            print(temp)
-            answer.append(n)
-        else:
-            break
+    for i in range(len(nums)):
+        for j in range(1, len(nums)):
+            if nums[i] + nums[j] == target:
+                answer.append((i, j))
     return answer
 
 

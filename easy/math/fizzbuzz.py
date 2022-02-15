@@ -3,7 +3,14 @@ from typing import List
 
 
 def fizzBuzz(n: int) -> List[str]:
-    return [i for i in range(1, n + 1)]
+    answer = list()
+
+    for i in range(1, n + 1):
+        if i % 3 == 0:
+            answer.append("Fizz")
+        else:
+            answer.append(i)
+    return answer
         
 
 print(fizzBuzz(3))

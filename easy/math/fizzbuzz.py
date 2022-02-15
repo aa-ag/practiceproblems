@@ -10,6 +10,8 @@ def fizzBuzz(n: int) -> List[str]:
             answer.append("Fizz")
         elif i % 5 == 0 and i % 3 != 0:
             answer.append("Buzz")
+        elif i % 5 == 0 and i % 3 == 0:
+            answer.append("FizzBuzz")
         else:
             answer.append(i)
     return answer

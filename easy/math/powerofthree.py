@@ -1,6 +1,8 @@
 
 def is_power_of_three(n: int) -> bool:
-    pass
+    if n <= 1:
+        return False
+    return n % 3 == 0
 
 
 print(is_power_of_three(27))

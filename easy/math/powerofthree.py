@@ -1,5 +1,9 @@
 
 def is_power_of_three(n: int) -> bool:
+    '''
+     O(log3(n)) time complexity: where 3 is the number of divisions
+     O(1) space complexity: no additional space required
+    '''
     if n < 1:
         return False
 

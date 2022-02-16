@@ -2,17 +2,20 @@ from typing import List
 
 
 def count_primes(n: int) -> int:
-    dp = [True] * n
+    '''
+     Sieve of Eratosthenes
+    '''
+    array = [True] * n
     
     count = 0
     for i in range(2,n):
-        if dp[i]:
+        if array[i]:
             count += 1
-        if not dp[i]: 
+        if not array[i]: 
             continue
             
         for j in range(i+i, n, i):
-            dp[j] = False
+            array[j] = False
         
     return count
 

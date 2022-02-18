@@ -5,10 +5,9 @@ def max_profit(prices: List[int]) -> int:
 
     profit = 0
 
-    for i in range(1, len(prices)):
-        if prices[i-1] < prices[i]:
-            move = prices[i] - prices[i-1]
-            profit += move
+    for i in range(len(prices)-1):
+        if prices[i] < prices[i+1]:
+            profit += prices[i+1] - prices[i]
 
     return profit
 

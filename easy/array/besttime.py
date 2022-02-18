@@ -1,5 +1,5 @@
-from audioop import reverse
 from typing import List
+
 
 def max_profit(prices: List[int]) -> int:
     if prices == sorted(prices, reverse=True):
@@ -8,9 +8,20 @@ def max_profit(prices: List[int]) -> int:
     if prices == sorted(prices):
         return len(prices) - 1
 
+    profit = 0
+
+    for i in range(1, len(prices)-1):
+        if prices[i] < prices[i+1]:
+            move = prices[i+1] - prices[i]
+            profit += move
+
+    return profit
+
+
 # Input: prices = [7,1,5,3,6,4]
 # Output: 7
 print(max_profit([7,1,5,3,6,4]))
+
 
 # Input: prices = [1,2,3,4,5]
 # Output: 4

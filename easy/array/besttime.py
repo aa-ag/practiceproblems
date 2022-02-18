@@ -1,7 +1,9 @@
+from audioop import reverse
 from typing import List
 
 def max_profit(prices: List[int]) -> int:
-    pass
+    if prices == sorted(prices, reverse=True):
+        return 0
 
 
 # Input: prices = [7,1,5,3,6,4]

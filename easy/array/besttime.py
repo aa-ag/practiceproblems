@@ -5,6 +5,8 @@ def max_profit(prices: List[int]) -> int:
     if prices == sorted(prices, reverse=True):
         return 0
 
+    if prices == sorted(prices):
+        return len(prices) - 1
 
 # Input: prices = [7,1,5,3,6,4]
 # Output: 7

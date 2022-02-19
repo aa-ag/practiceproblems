@@ -11,10 +11,8 @@ def roman_to_int(s: str) -> int:
     for i in range(len(s) -1):
         if d[s[i]] >= d[s[i+1]]:
             integer += d[s[i]]
-            # print(integer)
         else:
             integer -= d[s[i]]
-            # print(integer)
 
     return integer + d[s[-1]]
 

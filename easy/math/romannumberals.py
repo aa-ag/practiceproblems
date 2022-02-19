@@ -10,22 +10,27 @@ def roman_to_int(s: str) -> int:
 
     for i in range(len(s)):
         # check if next character is larger,
-        # if it is, must be compound combo
+        if d[s[i-1]] < d[s[i]]:
+            # if it is, must be compound combo
+            integer -= d[s[i-1]]
         # else, += to integer
-        integer += d[s[i]]
+        else:
+            integer += d[s[i-1]]
 
     return integer
 
 
 ### DRIVER
+print(roman_to_int('IV'))
+
 # Input: s = "III"
 # Output: 3
-print(roman_to_int("III"))
+# print(roman_to_int("III"))
 
 # Input: s = "LVIII"
 # Output: 58
-print(roman_to_int("LVIII"))
+# print(roman_to_int("LVIII"))
 
 # Input: s = "MCMXCIV"
 # Output: 1994
-print(roman_to_int("MCMXCIV"))
+# print(roman_to_int("MCMXCIV"))

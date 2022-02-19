@@ -8,16 +8,23 @@ d = {
 def roman_to_int(s: str) -> int:
     integer = 0
 
-    for i in range(len(s)):
-        # check if next character is larger,
-        if d[s[i-1]] < d[s[i]]:
-            # if it is, must be compound combo
-            integer -= d[s[i-1]]
-        # else, += to integer
-        else:
-            integer += d[s[i-1]]
+    if 'IV' in s \
+    or 'IX' in s \
+    or 'XL' in s \
+    or 'XC' in s \
+    or 'CD' in s \
+    or 'CM' in s:
+        for i in range(len(s)):
+            if d[s[i-1]] < d[s[i]]:
+                integer -= d[s[i-1]]
+            else:
+                integer += d[s[i-1]]
+        return integer
+    else:
+        for i in range(len(s)):
+            integer += d[s[i]]
 
-    return integer
+        return integer
 
 
 ### DRIVER
@@ -26,12 +33,12 @@ print(roman_to_int('IX'))
 
 # Input: s = "III"
 # Output: 3
-# print(roman_to_int("III"))
+print(roman_to_int("III"))
 
 # Input: s = "LVIII"
 # Output: 58
-# print(roman_to_int("LVIII"))
+print(roman_to_int("LVIII"))
 
 # Input: s = "MCMXCIV"
 # Output: 1994
-# print(roman_to_int("MCMXCIV"))
+print(roman_to_int("MCMXCIV"))

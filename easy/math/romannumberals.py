@@ -22,6 +22,7 @@ def roman_to_int(s: str) -> int:
 
 ### DRIVER
 print(roman_to_int('IV'))
+print(roman_to_int('IX'))
 
 # Input: s = "III"
 # Output: 3

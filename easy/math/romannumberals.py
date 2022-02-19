@@ -8,37 +8,20 @@ d = {
 def roman_to_int(s: str) -> int:
     integer = 0
 
-    if 'IV' in s \
-    or 'IX' in s \
-    or 'XL' in s \
-    or 'XC' in s \
-    or 'CD' in s \
-    or 'CM' in s:
-        for i in range(len(s)):
-            if d[s[i-1]] < d[s[i]]:
-                integer -= d[s[i-1]]
-            else:
-                integer += d[s[i-1]]
-        return integer
-    else:
-        for i in range(len(s)):
+    for i in range(len(s) -1):
+        if d[s[i]] >= d[s[i+1]]:
             integer += d[s[i]]
+            # print(integer)
+        else:
+            integer -= d[s[i]]
+            # print(integer)
 
-        return integer
+    return integer + d[s[-1]]
 
 
 ### DRIVER
-print(roman_to_int('IV'))
-print(roman_to_int('IX'))
-
-# Input: s = "III"
-# Output: 3
-print(roman_to_int("III"))
-
-# Input: s = "LVIII"
-# Output: 58
-print(roman_to_int("LVIII"))
-
-# Input: s = "MCMXCIV"
-# Output: 1994
-print(roman_to_int("MCMXCIV"))
+print(roman_to_int('IV')) # 4
+print(roman_to_int('IX')) # 9
+print(roman_to_int("III")) # 3
+print(roman_to_int("LVIII")) # 58
+print(roman_to_int("MCMXCIV")) # 1994

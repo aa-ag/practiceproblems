@@ -6,15 +6,35 @@ d = {
 
 ### FUNCTION(S)
 def roman_to_int(s: str) -> int:
-    integer = 0
+    d = {
+        "M": 1000, "CM": 900, "D": 500, "CD": 400, 
+        "C": 100, "XC": 90, "L": 50, "XL": 40, "X": 10, 
+        "IX": 9, "V": 5, "IV": 4, "I": 1
+    }
+    previous_character = 0
+    final_answer = 0
 
-    for i in range(len(s) -1):
-        if d[s[i]] >= d[s[i+1]]:
-            integer += d[s[i]]
-        else:
-            integer -= d[s[i]]
+    for character in s:
+        current_value = d[character]
+        final_answer += current_value
 
-    return integer + d[s[-1]]
+        if previous_character < current_value:
+            final_answer -= 2 * previous_character
+
+        previous_character = current_value
+    
+    return final_answer
+
+# def roman_to_int(s: str) -> int:
+#     integer = 0
+
+#     for i in range(len(s) -1):
+#         if d[s[i]] >= d[s[i+1]]:
+#             integer += d[s[i]]
+#         else:
+#             integer -= d[s[i]]
+
+#     return integer + d[s[-1]]
 
 
 ### DRIVER

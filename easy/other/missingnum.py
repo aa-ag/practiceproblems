@@ -2,7 +2,9 @@ from typing import List
 
 
 def missing_number(nums: List[int]) -> int:
-    return sorted(nums)
+    for i in range(len(nums)):
+        if i not in nums:
+            return i
 
 
 # Input: nums = [3,0,1]

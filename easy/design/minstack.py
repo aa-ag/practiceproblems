@@ -12,19 +12,24 @@ class MinStack:
     def top(self) -> int:
         return self.stack[-1]
 
-    def getMin(self) -> int:
-        pass
+    def get_min(self) -> int:
+        return min(self.stack)
 
 
 # Your MinStack object will be instantiated and called as such:
 obj = MinStack()
-val = 1
+val = 100
 obj.push(val)
-val = 2
+val = 20
+obj.push(val)
+val = 25
+obj.push(val)
+val = 3
 obj.push(val)
 print(obj.stack)
 obj.pop()
 print(obj.stack)
 param_3 = obj.top()
 print(param_3)
-# param_4 = obj.getMin()
+param_4 = obj.get_min()
+print(param_4)

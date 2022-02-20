@@ -3,9 +3,10 @@ from typing import List
 
 def missing_number(nums: List[int]) -> int:
     n = len(nums)
-    
+    nums_as_a_set = set(nums)
+
     for i in range(len(nums)+1):
-        if i not in nums:
+        if i not in nums_as_a_set:
             return i
 
 

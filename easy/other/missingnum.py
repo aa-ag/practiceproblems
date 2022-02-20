@@ -1,13 +1,19 @@
 from typing import List
 
-
 def missing_number(nums: List[int]) -> int:
     n = len(nums)
-    nums_as_a_set = set(nums)
+    expected_sum = n * (n+1) // 2
+    return expected_sum - sum(nums)
 
-    for i in range(len(nums)+1):
-        if i not in nums_as_a_set:
-            return i
+
+
+# def missing_number(nums: List[int]) -> int:
+#     n = len(nums)
+#     nums_as_a_set = set(nums)
+
+#     for i in range(len(nums)+1):
+#         if i not in nums_as_a_set:
+#             return i
 
 
 # Input: nums = [3,0,1]

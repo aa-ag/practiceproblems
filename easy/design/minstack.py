@@ -1,7 +1,7 @@
 class MinStack:
 
     def __init__(self):
-        pass
+        stack = list()
 
     def push(self, val: int) -> None:
         pass

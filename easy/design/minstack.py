@@ -1,10 +1,10 @@
 class MinStack:
 
     def __init__(self):
-        stack = list()
+        self.stack = list()
 
     def push(self, val: int) -> None:
-        pass
+        self.stack.append(val)
 
     def pop(self) -> None:
         pass
@@ -17,8 +17,10 @@ class MinStack:
 
 
 # Your MinStack object will be instantiated and called as such:
-# obj = MinStack()
-# obj.push(val)
+obj = MinStack()
+val = 1
+obj.push(val)
+print(obj.stack)
 # obj.pop()
 # param_3 = obj.top()
 # param_4 = obj.getMin()

@@ -2,6 +2,7 @@ class MinStack:
 
     def __init__(self):
         self.stack = list()
+        self.minimums = list()
 
     def push(self, val: int) -> None:
         self.stack.append(val)

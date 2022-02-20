@@ -7,7 +7,7 @@ class MinStack:
         self.stack.append(val)
 
     def pop(self) -> None:
-        pass
+        self.stack.pop()
 
     def top(self) -> int:
         pass
@@ -20,7 +20,10 @@ class MinStack:
 obj = MinStack()
 val = 1
 obj.push(val)
+val = 2
+obj.push(val)
 print(obj.stack)
-# obj.pop()
+obj.pop()
+print(obj.stack)
 # param_3 = obj.top()
 # param_4 = obj.getMin()

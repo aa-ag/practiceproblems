@@ -1,7 +1,10 @@
 # get number of '1' bits on an unsigned integer
+def haming_weight(n: int) -> int:
+    return sum([1 if (1 << i) & n else 0 for i in range(32)])
 
-def hamming_weight(n: int) -> int:
-    return bin(n).count('1')
+
+# def hamming_weight(n: int) -> int:
+#     return bin(n).count('1')
 
 
 # def hamming_weight(n: int) -> int:

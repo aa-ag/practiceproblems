@@ -1,11 +1,15 @@
 # get number of '1' bits on an unsigned integer
 
 def hamming_weight(n: int) -> int:
-    count = 0
-    while n:
-        count += 1
-        n &= n - 1
-    return count
+    return bin(n).count('1')
+
+
+# def hamming_weight(n: int) -> int:
+#     count = 0
+#     while n:
+#         count += 1
+#         n &= n - 1
+#     return count
 
 
 # Input: n = 00000000000000000000000000001011

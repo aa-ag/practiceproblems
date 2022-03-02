@@ -1,7 +1,7 @@
 
 
 def reverse_bits(self, n: int) -> int:
-    pass
+    return bin(n)
 
 
 

@@ -1,7 +1,7 @@
 
 
 def reverse_bits(self, n: int) -> int:
-    return bin(n)
+    return int(bin(n)[::-1], 2)
 
 
 

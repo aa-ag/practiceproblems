@@ -4,8 +4,9 @@ def reverse_bits(self, n: int) -> int:
     '''
      one step at the time version
     '''
-    b = bin(n)[:2]
-    reveresed_b = b[::-1]
+    b = bin(n)[2:]
+    length_32 = '0' * (32 - len(b)) + b
+    reveresed_b = length_32[::-1]
     return int(reveresed_b, 2)
 
 

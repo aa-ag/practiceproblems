@@ -1,7 +1,7 @@
 
 
 def reverse_bits(self, n: int) -> int:
-    return int(bin(n).replace('0b', '').zfill(32)[::-1], 2)
+    return int(bin(n)[:2].zfill(32)[::-1], 2)
 
 
 

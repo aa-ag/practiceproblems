@@ -1,8 +1,12 @@
 
 
 def reverse_bits(self, n: int) -> int:
-    return int(bin(n)[:2].zfill(32)[::-1], 2)
-
+    '''
+     one step at the time version
+    '''
+    b = bin(n)[:2]
+    reveresed_b = b[::-1]
+    return int(reveresed_b, 2)
 
 
 # Input: n = 00000010100101000001111010011100

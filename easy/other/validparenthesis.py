@@ -5,6 +5,6 @@ def is_valid(s: str) -> bool:
 
 
 
-print(is_valid())
+print(is_valid("()[]\{\}"))
 
-print(is_valid())
+print(is_valid("(]"))

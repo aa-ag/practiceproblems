@@ -14,7 +14,7 @@ def is_valid(s: str) -> bool:
         elif i in [')', ']', '\}']:
             stack.pop()
 
-    return stack
+    return not len(stack)
 
 
 

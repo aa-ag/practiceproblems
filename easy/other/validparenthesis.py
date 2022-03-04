@@ -1,6 +1,11 @@
 
 
 def is_valid(s: str) -> bool:
+    '''
+     create an empty list to use as a stack,
+     add to stack when opening parenthesis is found,
+     pop from the stack when closing parenthesis is found
+    '''
     stack = list()
 
     for i in s:

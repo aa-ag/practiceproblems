@@ -2,23 +2,16 @@ from typing import List
 
 
 def intersect(nums1: List[int], nums2: List[int]) -> List[int]:    
+    d = dict()
+    for n1 in nums1:
+        d[n1] = d.get(n1, 0) + 1
+        
     answer = list()
-
-    if len(nums1) > len(nums2):
-        for i in nums1:
-            if i in nums2:
-                answer.append(i)
-                nums2.remove(i)
-        return answer
-    elif len(nums1) == len(nums2):
-        return [i for i in nums1 if i in nums2]
-    else:
-        for i in nums2:
-            if i in nums1:
-                answer.append(i)
-                nums2.remove(i)
-                nums1.remove(i)
-        return answer
+    for n2 in nums2:
+        if n2 in d and d[n2] > 0:
+            answer.append(n2)
+            d[n2] -= 1
+    return answer
 
 # Output: [2,2]
 print(intersect([1,2,2,1], [2,2]))

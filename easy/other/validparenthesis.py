@@ -1,19 +1,20 @@
 def is_valid(s: str) -> bool:
-    stack = list()
-    ch_opp = {
-        ')':'(', 
-        '}':'{', 
-        ']':'['
-    }
+    stack = []
+    open_set = set(['(', '[', '{'])
+    open_to_close = {'(' : ')', '{' : '}', '[' : ']'}
     
-    for ch in s:
-        if ch in ch_opp:
-            if not stack or stack[-1] != ch_opp[ch]:
-                return False
-            stack.pop()
+    for parenthesis in s:
+        if parenthesis in open_set:
+            stack.append(parenthesis)
         else:
-            stack.append(ch)
-    return not stack
+            if len(stack) == 0:
+                return False
+            
+            open_p = stack.pop()
+            if parenthesis != open_to_close[open_p]:
+                return False
+            
+    return len(stack) == 0
 
 
 # def is_valid(s: str) -> bool:

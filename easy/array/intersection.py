@@ -1,16 +1,13 @@
 from typing import List
+from collections import Counter as counter
 
-
-def intersect(nums1: List[int], nums2: List[int]) -> List[int]:    
-    d = dict()
-    for n1 in nums1:
-        d[n1] = d.get(n1, 0) + 1
-        
+def intersect(nums1: List[int], nums2: List[int]) -> List[int]:
+    c = counter(nums1)
     answer = list()
-    for n2 in nums2:
-        if n2 in d and d[n2] > 0:
-            answer.append(n2)
-            d[n2] -= 1
+    for n in nums2:
+        if c[n] > 0:
+            answer.append(n)
+            c[n] -= 1
     return answer
 
 # Output: [2,2]

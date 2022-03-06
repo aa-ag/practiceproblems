@@ -1,7 +1,8 @@
 from typing import List
 
 def is_valid(board: List[List[str]]) -> bool:
-    pass 
+    for row in board:
+        print(row)
 
 
 board = [
@@ -31,5 +32,5 @@ board = [
     ,[".",".",".",".","8",".",".","7","9"]
 ]
 # Output: false
-print(is_valid(board))
+# print(is_valid(board))
 

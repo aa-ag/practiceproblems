@@ -2,7 +2,7 @@ from typing import List
 
 def is_valid(board: List[List[str]]) -> bool:
     for row in board:
-        print(row)
+        print([int(i) for i in row if i != '.'])
 
 
 board = [

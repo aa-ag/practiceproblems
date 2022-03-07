@@ -6,12 +6,6 @@ from typing import List
 
 
 def is_valid(board: List[List[str]]) -> bool:
-    # for row in board:
-    #     nums = [int(i) for i in row if i != '.']
-    #     for n in nums:
-    #         if n > 9 or n < 0 or nums.count(n) > 1:
-    #             return False
-    #     print(row)
     three_by_three = list()
 
     for i in range(0, 9, 3):
@@ -21,7 +15,12 @@ def is_valid(board: List[List[str]]) -> bool:
                     board[i+2][j:j+3]
             three_by_three.append(block)
         
-    print(three_by_three)
+    for grid in three_by_three:
+        nums = [int(i) for i in grid if i != '.']
+        for n in nums:
+            if n > 9 or n < 0 or nums.count(n) > 1:
+                return False
+    return True
 
 
 board = [
@@ -36,8 +35,7 @@ board = [
     ,[".",".",".",".","8",".",".","7","9"]
 ]
 # Output: true
-# print(is_valid(board))
-is_valid(board)
+print(is_valid(board))
 
 
 board = [
@@ -52,5 +50,5 @@ board = [
     ,[".",".",".",".","8",".",".","7","9"]
 ]
 # Output: false
-# print(is_valid(board))
+print(is_valid(board))
 

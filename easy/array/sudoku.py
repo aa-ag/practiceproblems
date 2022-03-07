@@ -2,7 +2,11 @@ from typing import List
 
 def is_valid(board: List[List[str]]) -> bool:
     for row in board:
-        print([int(i) for i in row if i != '.'])
+        nums = [int(i) for i in row if i != '.']
+        for n in nums:
+            if n > 9 or n < 0 or nums.count(n) > 1:
+                return False
+        print(row)
 
 
 board = [
@@ -17,7 +21,8 @@ board = [
     ,[".",".",".",".","8",".",".","7","9"]
 ]
 # Output: true
-print(is_valid(board))
+# print(is_valid(board))
+is_valid(board)
 
 
 board = [

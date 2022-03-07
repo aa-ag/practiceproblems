@@ -1,4 +1,5 @@
 from typing import List
+import numpy as np
 
 def is_valid(board: List[List[str]]) -> bool:
     for row in board:

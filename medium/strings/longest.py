@@ -1,5 +1,4 @@
-# TODO: check 
-# https://www.enjoyalgorithms.com/blog/longest-substring-without-repeating-characters
+import re
 
 def lengthOfLongestSubstring(s: str) -> int:
     if all(i == s[0] for i in s):
@@ -13,7 +12,9 @@ def lengthOfLongestSubstring(s: str) -> int:
         else:
             continue
     
-    return temp
+    if temp in s:
+        return len(temp)
+    
 
 
 

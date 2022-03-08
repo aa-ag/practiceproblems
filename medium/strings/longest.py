@@ -2,6 +2,8 @@
 # https://www.enjoyalgorithms.com/blog/longest-substring-without-repeating-characters
 
 def lengthOfLongestSubstring(s: str) -> int:
+    if all(i == s[0] for i in s):
+        return 1
     answer = ''
 
     for i in s:

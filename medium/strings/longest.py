@@ -4,13 +4,16 @@
 def lengthOfLongestSubstring(s: str) -> int:
     if all(i == s[0] for i in s):
         return 1
-    answer = ''
+
+    temp = ''
 
     for i in s:
-        if i not in answer:
-            answer += i
+        if i not in temp:
+            temp += i
         else:
-            return len(answer)
+            continue
+    
+    return temp
 
 
 

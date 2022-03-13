@@ -1,6 +1,5 @@
 ############------------ IMPORTS ------------############
 from typing import List
-from unicodedata import name
 
 
 ############------------ FUNCTION(S) ------------############

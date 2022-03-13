@@ -5,7 +5,11 @@ from collections import Counter as count_them
 
 ############------------ FUNCTION(S) ------------############
 def majority_element(nums: List[int]) -> int:
-    return count_them(nums)
+    counted = count_them(nums)
+    return max(
+        counted, 
+        key = lambda x: nums[x]
+    )
 
 
 ############------------ DRIVER CODE ------------############

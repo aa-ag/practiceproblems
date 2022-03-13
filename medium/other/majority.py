@@ -5,7 +5,7 @@ from collections import Counter as count_them
 
 ############------------ FUNCTION(S) ------------############
 def majority_element(nums: List[int]) -> int:
-    pass
+    return count_them(nums)
 
 
 ############------------ DRIVER CODE ------------############

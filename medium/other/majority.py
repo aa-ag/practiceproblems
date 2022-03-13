@@ -5,6 +5,10 @@ from collections import Counter as count_them
 
 ############------------ FUNCTION(S) ------------############
 def majority_element(nums: List[int]) -> int:
+    '''
+     - create dictionary of each integer's count
+     - return key with highest count value
+    '''
     counted = count_them(nums)
     return max(
         counted, 

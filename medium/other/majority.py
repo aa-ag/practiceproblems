@@ -8,7 +8,7 @@ def majority_element(nums: List[int]) -> int:
     counted = count_them(nums)
     return max(
         counted, 
-        key = lambda x: nums[x]
+        key = lambda x: counted[x]
     )
 
 

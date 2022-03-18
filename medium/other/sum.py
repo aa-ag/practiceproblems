@@ -8,7 +8,15 @@ def get_sum(a: int, b: int) -> int:
      return the sum of the two integers 
      without using the operators + and -
     '''
-    return a, b
+    ### version from geeksforgeeks
+    while b != 0:
+        carry = a & b
+
+        a = a ^ b
+
+        b = carry << 1
+
+    return a
 
 
 ############------------ DRIVER CODE ------------############

@@ -3,6 +3,11 @@
 
 ############------------ FUNCTION(S) ------------############
 def get_sum(a: int, b: int) -> int:
+    '''
+     Given two integers a and b, 
+     return the sum of the two integers 
+     without using the operators + and -
+    '''
     pass
 
 

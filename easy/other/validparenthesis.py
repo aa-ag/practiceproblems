@@ -14,7 +14,7 @@ def is_valid(s: str) -> bool:
             if parenthesis != open_to_close[open_p]:
                 return False
             
-    return len(stack) == 0
+    return not stack
 
 
 # def is_valid(s: str) -> bool:

@@ -20,3 +20,6 @@ def mergeTwoLists(list1, list2):
             break
         if list2 is None:
             tail.next = list1
+            break
+
+       

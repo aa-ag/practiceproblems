@@ -3,11 +3,6 @@ def my_pow(x: float, n: int) -> float:
     '''
      calculates x to the power of n
     '''
-    if x == 0:
-        return 0
-
-    if n == 0:
-        return 1
     return x ** n
 
 

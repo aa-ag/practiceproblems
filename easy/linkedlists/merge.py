@@ -31,6 +31,7 @@ def mergeTwoLists(list1, list2):
             tail.next = list2
             list2 = list2.next
 
+        ### move tail
         tail = tail.next
 
     return dummy.next

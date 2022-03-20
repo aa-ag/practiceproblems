@@ -3,7 +3,7 @@ def my_pow(x: float, n: int) -> float:
     '''
      calculates x to the power of n
     '''
-    return x ** n
+    return round(x ** n, 4)
 
 
 # Input: x = 2.00000, n = 10

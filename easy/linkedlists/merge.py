@@ -7,7 +7,16 @@ def mergeTwoLists(list1, list2):
     #         self.val = val
     #         self.next = next
     ### dummy node to store result
-    dummy = Node(0)
+    dummy = ListNode(0)
 
     ### tail store last node
     tail = dummy
+
+    while True:
+        ### check if either list is empty
+        ### if so, join all elements from non-empty  list
+        if list1 is None:
+            tail.next = list2
+            break
+        if list2 is None:
+            tail.next = list1

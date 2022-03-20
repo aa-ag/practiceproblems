@@ -8,3 +8,6 @@ def mergeTwoLists(list1, list2):
     #         self.next = next
     ### dummy node to store result
     dummy = Node(0)
+
+    ### tail store last node
+    tail = dummy

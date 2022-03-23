@@ -6,12 +6,16 @@ def is_happy(n: int) -> bool:
     '''
     check = set()
     while n != 1:
-        n = sum(int(i)**2 for i in str(n))
+        res = 0
+        while n:
+            res += (n % 10)**2
+            n //= 10
+        n = res
         if n in check:
             return False
-        check.add(n)
+        else:
+            check.add(n)
     return True
-
 
 ############------------ DRIVER CODE ------------############
 # Input: n = 19

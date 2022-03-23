@@ -4,6 +4,10 @@ def is_happy(n: int) -> bool:
 
 
 ############------------ DRIVER CODE ------------############
-print(is_happy())
+# Input: n = 19
+# Output: true
+print(is_happy(19))
 
-print(is_happy())
+# Input: n = 2
+# Output: false
+print(is_happy(2))

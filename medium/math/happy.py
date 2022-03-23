@@ -1,9 +1,5 @@
 ############------------ FUNCTION(S) ------------############
 def is_happy(n: int) -> bool:
-    '''
-     1 <= n <= 231 - 1
-     code from https://www.w3resource.com/python-exercises/basic/python-basic-1-exercise-66.php
-    '''
     check = set()
     while n != 1:
         res = 0

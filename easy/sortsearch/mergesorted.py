@@ -4,7 +4,7 @@ from typing import List
 
 ############------------ FUNCTION(S) ------------############
 def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-    return nums1, m, nums2, n
+    return sorted(nums1[:m] + nums2[:n])
 
 
 ############------------ DRIVER CODE ------------############

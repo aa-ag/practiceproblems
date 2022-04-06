@@ -1,5 +1,8 @@
 ############------------ FUNCTION(S) ------------############
 def first_bad_version(n: int) -> int:
+    if n == 1:
+        return n
+        
     left, right = 1, n
 
     while left <= right:

@@ -1,6 +1,7 @@
 ############------------ FUNCTION(S) ------------############
 def first_bad_version(n: int) -> int:
-    return [i for i in range(1, n)]
+    r = [i for i in range(n-1, -1, -1)]
+    return r
 
 
 ############------------ DRIVER CODE ------------############

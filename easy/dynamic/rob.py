@@ -7,12 +7,13 @@ def rob(nums: List[int]) -> int:
     if len(nums) == 2:
         return max(nums)
 
-    booty = 0
+    odds = 0
+    evens = 0
 
     for i in range(len(nums)):
         if i % 2 == 0:
-            booty += nums[i]
-    return booty
+            evens += nums[i]
+        odds += nums[i]
 
 
 # Input: nums = [1,2,3,1]

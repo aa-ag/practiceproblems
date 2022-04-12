@@ -1,7 +1,12 @@
 from typing import List
 
 def rob(nums: List[int]) -> int:
-    pass
+    booty = 0
+
+    for i in range(len(nums)):
+        if i % 2 == 0:
+            booty += nums[i]
+    return booty
 
 
 # Input: nums = [1,2,3,1]

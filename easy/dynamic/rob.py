@@ -15,7 +15,9 @@ def rob(nums: List[int]) -> int:
             evens += nums[i]
         odds += nums[i]
 
+    return evens if evens > odds else odds
 
+    
 # Input: nums = [1,2,3,1]
 # Output: 4
 print(rob([1,2,3,1]))

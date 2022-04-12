@@ -4,6 +4,9 @@ def rob(nums: List[int]) -> int:
     if len(nums) == 1:
         return nums[0]
 
+    if len(nums) == 2:
+        return max(nums)
+
     booty = 0
 
     for i in range(len(nums)):

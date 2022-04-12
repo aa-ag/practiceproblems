@@ -1,6 +1,9 @@
 from typing import List
 
 def rob(nums: List[int]) -> int:
+    if len(nums) == 1:
+        return nums[0]
+
     booty = 0
 
     for i in range(len(nums)):

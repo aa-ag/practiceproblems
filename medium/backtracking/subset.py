@@ -4,7 +4,10 @@ import itertools
 def subsets(nums: List[int]) -> List[List[int]]:
     answer = list()
     for i in range(len(nums)):
-        print([list(j) for j in itertools.combinations(nums, i)])
+        for j in itertools.combinations(nums, i):
+            answer.append(list(j))
+    
+    return answer + [nums]
 
 
 # Input: nums = [1,2,3]

@@ -1,7 +1,8 @@
 from typing import List
 
 def first_missing_positive(nums: List[int]) -> int:
-    pass
+    nums.sort()
+    return nums
 
 
 # Input: nums = [1,2,0]

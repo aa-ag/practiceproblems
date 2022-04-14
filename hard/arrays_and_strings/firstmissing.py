@@ -2,7 +2,9 @@ from typing import List
 
 def first_missing_positive(nums: List[int]) -> int:
     nums.sort()
-    return nums
+    for i in range(1, max(nums) + 2):
+        if i not in nums:
+            return i
 
 
 # Input: nums = [1,2,0]

@@ -2,7 +2,10 @@
 from typing import List
 
 def increasing_triplet(nums: List[int]) -> bool:
-    pass
+    for i in range(len(nums)-2):
+        if nums[i] < nums[i+1] and nums[i+1] < nums[i+2]:
+            return True
+    return False
 
 
 # Input: nums = [1,2,3,4,5]

@@ -7,9 +7,11 @@ def increasing_triplet(nums: List[int]) -> bool:
       return true if there exists a triple of indices (i, j, k) 
       such that i < j < k and nums[i] < nums[j] < nums[k]
     '''
+	# Time Complexity: O(n)
+	# Space Complexity: O(1)
     first, second = math.inf, math.inf    
     for i in nums:
-		 # in example 2, each number is decreasing, so each of those numbers
+		# in example 2, each number is decreasing, so each of those numbers
 		# will always be first, none of i + 1 in e.g 2 is greater than its prev i
         if i <= first:
             first = i

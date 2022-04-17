@@ -4,6 +4,7 @@ def group_anagrams(strs: List[str]) -> List[List[str]]:
     if len(strs) == 1:
         return [strs]
 
+    answer = list()
     anagrams = set()
 
     for str in strs:
@@ -19,7 +20,10 @@ def group_anagrams(strs: List[str]) -> List[List[str]]:
             if ''.join(sorted(i)) == k:
                 d[k].append(i)
             
-    return [d.values()]
+    for value in d.values():
+        answer.append(value)
+    
+    return answer
 
 # Input: strs = ["eat","tea","tan","ate","nat","bat"]
 # Output: [["bat"],["nat","tan"],["ate","eat","tea"]]

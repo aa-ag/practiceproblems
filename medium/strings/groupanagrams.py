@@ -11,7 +11,10 @@ def group_anagrams(strs: List[str]) -> List[List[str]]:
     for anagram in list(anagrams):
         d[anagram] = list()
 
-    print(d)
+    for k, v in d.items():
+        for i in strs:
+            if ''.join(sorted(i)) == k:
+                d[k].append(i)
             
 
 

@@ -1,6 +1,9 @@
 from typing import List
 
 def group_anagrams(strs: List[str]) -> List[List[str]]:
+    if len(strs) == 1:
+        return [strs]
+
     anagrams = set()
 
     for str in strs:
@@ -24,4 +27,4 @@ print(group_anagrams(["eat","tea","tan","ate","nat","bat"]))
 
 # Input: strs = [""]
 # Output: [[""]]
-# print(group_anagrams([""]))
+print(group_anagrams([""]))

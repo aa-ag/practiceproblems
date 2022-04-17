@@ -6,7 +6,13 @@ def group_anagrams(strs: List[str]) -> List[List[str]]:
     for str in strs:
         anagrams.add(''.join(sorted(str)))
 
-    print(anagrams)
+    d = dict()
+
+    for anagram in list(anagrams):
+        d[anagram] = list()
+
+    print(d)
+            
 
 
 # Input: strs = ["eat","tea","tan","ate","nat","bat"]

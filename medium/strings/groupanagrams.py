@@ -1,10 +1,12 @@
 from typing import List
 
 def group_anagrams(strs: List[str]) -> List[List[str]]:
-    anagrams = list()
+    anagrams = set()
 
-    for i in range(len(strs)):
-        print(sorted(strs[i]))
+    for str in strs:
+        anagrams.add(''.join(sorted(str)))
+
+    print(anagrams)
 
 
 # Input: strs = ["eat","tea","tan","ate","nat","bat"]
@@ -13,4 +15,4 @@ print(group_anagrams(["eat","tea","tan","ate","nat","bat"]))
 
 # Input: strs = [""]
 # Output: [[""]]
-print(group_anagrams([""]))
+# print(group_anagrams([""]))

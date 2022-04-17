@@ -16,7 +16,7 @@ def group_anagrams(strs: List[str]) -> List[List[str]]:
             if ''.join(sorted(i)) == k:
                 d[k].append(i)
             
-
+    return [d.values()]
 
 # Input: strs = ["eat","tea","tan","ate","nat","bat"]
 # Output: [["bat"],["nat","tan"],["ate","eat","tea"]]

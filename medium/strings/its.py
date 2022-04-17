@@ -9,6 +9,8 @@ def increasing_triplet(nums: List[int]) -> bool:
     '''
     first, second = math.inf, math.inf    
     for i in nums:
+		 # in example 2, each number is decreasing, so each of those numbers
+		# will always be first, none of i + 1 in e.g 2 is greater than its prev i
         if i <= first:
             first = i
         elif i <= second:

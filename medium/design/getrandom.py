@@ -1,6 +1,9 @@
+from random import Random
+
+
 class RandomizedSet:
     def __init__(self):
-        pass
+        self.set = set()
 
     def insert(self, val: int) -> bool:
         pass
@@ -10,3 +13,6 @@ class RandomizedSet:
 
     def getRandom(self) -> int:
         pass
+
+obj = RandomizedSet()
+obj

@@ -6,7 +6,10 @@ class RandomizedSet:
         self.set = set()
 
     def insert(self, val: int) -> bool:
-        pass
+        if val not in self.set:
+            self.set.add(val)
+            return True
+        return False
 
     def remove(self, val: int) -> bool:
         pass
@@ -15,4 +18,4 @@ class RandomizedSet:
         pass
 
 obj = RandomizedSet()
-obj
+obj.insert(1)

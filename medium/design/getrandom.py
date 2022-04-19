@@ -1,4 +1,4 @@
-from random import Random
+import random
 
 
 class RandomizedSet:
@@ -18,7 +18,11 @@ class RandomizedSet:
         return False
 
     def getRandom(self) -> int:
-        pass
+        return set(random.sample(self.set, 1))
 
 obj = RandomizedSet()
 obj.insert(1)
+obj.insert(2)
+obj.insert(1)
+obj.insert(3)
+obj.getRandom()

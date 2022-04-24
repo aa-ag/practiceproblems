@@ -1,7 +1,7 @@
 import math
 
 def sqrt(x: int) -> int:
-    return math.sqrt(x)
+    return int(math.sqrt(x))
 
 
 # Input: x = 4

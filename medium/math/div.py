@@ -1,6 +1,10 @@
 
 
 def divide(dividend: int, divisor: int) -> int:
+    '''
+      divide two integers without using multiplication, 
+      division, and mod operator
+    '''
     return dividend, divisor
 
 

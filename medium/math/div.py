@@ -1,11 +1,21 @@
 
 
+from unittest import result
+
+
 def divide(dividend: int, divisor: int) -> int:
     '''
       divide two integers without using multiplication, 
       division, and mod operator
     '''
-    return dividend, divisor
+    div = dividend + divisor
+    result = 0
+    
+    while div > divisor:
+        div = div - divisor
+        result += 1
+
+    return result
 
 
 # Input: dividend = 10, divisor = 3

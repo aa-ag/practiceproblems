@@ -8,14 +8,14 @@ def divide(dividend: int, divisor: int) -> int:
       divide two integers without using multiplication, 
       division, and mod operator
     '''
-    div = dividend + divisor
-    result = 0
-    
-    while div > divisor:
-        div = div - divisor
-        result += 1
+    remainder = dividend
+    quotient = 0
 
-    return result
+    while remainder >= divisor:
+        remainder = remainder - divisor
+        quotient += 1
+
+    return quotient
 
 
 # Input: dividend = 10, divisor = 3

@@ -4,14 +4,22 @@ def divide(dividend: int, divisor: int) -> int:
       divide two integers without using multiplication, 
       division, and mod operator
     '''
+    sign = ''
+
+    if divisor < 0:
+        sign = -1
+    else:
+        sign = 1
+
     remainder = dividend
+    divisor = abs(divisor)
     quotient = 0
 
     while remainder >= divisor:
         remainder = remainder - divisor
         quotient += 1
 
-    return quotient
+    return quotient * sign
 
 
 # Input: dividend = 10, divisor = 3

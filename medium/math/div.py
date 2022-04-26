@@ -1,8 +1,4 @@
 
-
-from unittest import result
-
-
 def divide(dividend: int, divisor: int) -> int:
     '''
       divide two integers without using multiplication, 

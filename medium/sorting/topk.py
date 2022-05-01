@@ -5,7 +5,7 @@ import operator
 
 def top_k_frequent(nums: List[int], k: int) -> List[int]:
     d = c(nums)
-    return sorted(d.items(), key=lambda x:x[1])
+    return d.most_common(k)[0][0]
 
 # Input: nums = [1,1,1,2,2,3], k = 2
 # Output: [1,2]

@@ -1,4 +1,3 @@
-from ast import operator
 from typing import List
 from collections import Counter as c
 

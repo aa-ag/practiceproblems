@@ -1,7 +1,6 @@
 from ast import operator
 from typing import List
 from collections import Counter as c
-import operator
 
 def top_k_frequent(nums: List[int], k: int) -> List[int]:
     d = c(nums)

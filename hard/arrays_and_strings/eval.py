@@ -1,7 +1,5 @@
-
 def calculate(s: str) -> int:
-    pass
-
+    return eval(s)
 
 
 # Input: s = "3+2*2"

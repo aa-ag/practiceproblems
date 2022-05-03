@@ -6,7 +6,7 @@ def first_missing_positive(nums: List[int]) -> int:
     for i in compare:
         if i not in nums:
             return i
-
+    return max(nums) + 1
 
 # Input: nums = [1,2,0]
 # Output: 3

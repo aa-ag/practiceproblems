@@ -1,5 +1,7 @@
+import math
+
 def calculate(s: str) -> int:
-    return eval(s)
+    return math.floor(eval(s))
 
 
 # Input: s = "3+2*2"

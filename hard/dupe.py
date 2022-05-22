@@ -1,9 +1,10 @@
 
 from typing import List
-from collections import Counter as c
+from collections import Counter
 
 def find_duplicate(nums: List[int]) -> int:
-    return c(nums)
+    c = Counter(nums)
+    return max(c, key=c.get)
         
 # Input: nums = [1,3,4,2,2]
 # Output: 2

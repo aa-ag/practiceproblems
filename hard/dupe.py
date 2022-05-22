@@ -1,9 +1,9 @@
 
 from typing import List
-from collections import Counter
+from collections import Counter as c
 
 def find_duplicate(nums: List[int]) -> int:
-    pass
+    return c(nums)
         
 # Input: nums = [1,3,4,2,2]
 # Output: 2

@@ -3,7 +3,7 @@ import numpy as np
 
 def exist(board: List[List[str]], word: str) -> bool:
     a = np.array(board)
-    return a.flatten()
+    return word in ''.join(a.flatten())
 
 
 board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]

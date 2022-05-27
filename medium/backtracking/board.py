@@ -1,8 +1,9 @@
 from typing import List
-
+import numpy as np
 
 def exist(board: List[List[str]], word: str) -> bool:
-    pass
+    a = np.array(board)
+    return a.flatten()
 
 
 board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]

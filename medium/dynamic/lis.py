@@ -6,11 +6,9 @@ def l(nums: List[int]) -> int:
 
     for i in range(1, len(nums)):
         if nums[i - 1] >= nums[i]:
-            temp = nums[i - 1]
             continue
         else:
             if nums[i - 1] >= nums[i]:
-                temp = nums[i - 1]
                 continue
             else:
                 answer.append(nums[i -1])

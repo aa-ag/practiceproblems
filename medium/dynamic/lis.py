@@ -8,10 +8,7 @@ def l(nums: List[int]) -> int:
         if nums[i - 1] >= nums[i]:
             continue
         else:
-            if nums[i - 1] >= nums[i]:
-                continue
-            else:
-                answer.append(nums[i -1])
+            answer.append(nums[i - 1])
     return answer
 
 # Input: nums = [10,9,2,5,3,7,101,18]

@@ -15,4 +15,8 @@ print(calculate(" 3/2 "))
 # Output: 5
 print(calculate(" 3+5 / 2 "))
 
+# "14/3*2"
+# Output: 9
+# Expected: 8
+print(calculate("14/3*2"))
         

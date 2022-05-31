@@ -1,6 +1,8 @@
 
 def calculate(s: str) -> int:
-    return int(eval(s))
+    s = s.replace(' ', '')
+    code = compile(s, "<string>", "eval")
+    return eval(code)
 
 
 # Input: s = "3+2*2"

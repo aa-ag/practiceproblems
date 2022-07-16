@@ -10,10 +10,10 @@ def three_sum(nums: List[int]) -> List[List[int]]:
             if nums[i] > 0:
                 break
             if i == 0 or nums[i] != nums[i-1]:
-                triples.extend(twoSum(nums, i))
+                triples.extend(two_sum(nums, i))
         return triples
     
-def twoSum(nums: List[int], i: int) -> List[List[int]]:
+def two_sum(nums: List[int], i: int) -> List[List[int]]:
     triples = []
     
     j, k = i + 1, len(nums) - 1

@@ -1,11 +1,7 @@
 from typing import List
 
 def remove_element(nums: List[int], val: int) -> int:
-    for n in nums:
-        if n == val:
-            nums.remove(n)
-    k = nums
-    return len(k)
+    return len(list(n for n in nums if n != val))
 
 
 # Input: nums = [3,2,2,3], val = 3

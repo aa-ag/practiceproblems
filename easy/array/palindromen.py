@@ -1,6 +1,6 @@
 
 def is_it(x: int) -> bool:
-    if x <= 0:
+    if x < 0:
         return False
     else:
         s = str(x)

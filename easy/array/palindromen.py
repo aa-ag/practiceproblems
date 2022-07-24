@@ -2,8 +2,11 @@
 def is_it(x: int) -> bool:
     pass
 
-print(is_it())
+# true
+print(is_it(121))
 
-print(is_it())
+# false
+print(is_it(-121))
 
-print(is_it())
+# false
+print(is_it(10))

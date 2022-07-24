@@ -1,7 +1,13 @@
 from typing import List
 
 def remove_element(nums: List[int], val: int) -> int:
-    return len(list(n for n in nums if n != val))
+    try:
+        while True: 
+            nums.remove(val)
+    except:
+        pass
+    
+    return len(nums)
 
 
 # Input: nums = [3,2,2,3], val = 3

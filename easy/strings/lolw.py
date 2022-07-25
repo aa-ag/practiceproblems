@@ -1,6 +1,6 @@
 
 def lolw(s: str) -> int:
-    pass
+    return len(s.split()[-1])
 
 
 # Input: s = "Hello World"

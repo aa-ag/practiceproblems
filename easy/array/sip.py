@@ -1,7 +1,16 @@
 from typing import List
 
 def sip(nums: List[int], target: int) -> int:
-    pass
+    if target in nums:
+        return nums.index(target)
+    else:
+        l = list(i for i in range(1, max(nums)+1))
+        if target > max(l):
+            return len(nums)
+        else:
+            return l.index(target)
+            
+            
 
 
 # Input: nums = [1,3,5,6], target = 5

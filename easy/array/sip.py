@@ -7,6 +7,8 @@ def sip(nums: List[int], target: int) -> int:
         l = list(i for i in range(1, max(nums)+1))
         if target > max(l):
             return len(nums)
+        elif target > min(l):
+            return 0
         else:
             return l.index(target)
             

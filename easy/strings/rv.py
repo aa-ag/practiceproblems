@@ -5,7 +5,12 @@ def rv(s: str) -> str:
     for i in range(len(s)):
         if s[i] in 'aeiouAEIOU':
             v.append(i)
-    return v
+    
+    for j in v:
+        s[j] = v[-1]
+        v = v[:-1]
+    
+    print(s)
 
 
 # Input: s = "hello"

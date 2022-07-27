@@ -1,8 +1,17 @@
 def rv(s: str) -> str:
-    pass
+    v = list()
+    answer = ''
 
-print(rv())
+    for i in range(len(s)):
+        if s[i] in 'aeiouAEIOU':
+            v.append(i)
 
-print(rv())
+    print(v)
 
-print(rv())
+# Input: s = "hello"
+# Output: "holle"
+print(rv("hello"))
+
+# Input: s = "leetcode"
+# Output: "leotcede"
+print(rv("leetcode"))

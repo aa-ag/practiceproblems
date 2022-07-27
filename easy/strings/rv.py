@@ -5,8 +5,8 @@ def rv(s: str) -> str:
     for i in range(len(s)):
         if s[i] in 'aeiouAEIOU':
             v.append(i)
+    return v
 
-    print(v)
 
 # Input: s = "hello"
 # Output: "holle"

@@ -13,7 +13,7 @@ def rv(s: str) -> str:
         else:
             answer += s[j]
 
-    print(answer)
+    return answer
 
 
 # Input: s = "hello"

@@ -2,7 +2,8 @@ from email.mime import base
 
 
 def add_binary(a: str, b: str) -> str:
-    return int(a, base=2) + int(b, base=2)
+    sum = int(a, base=2) + int(b, base=2)
+    return bin(sum)[2:]
 
 # Input: a = "11", b = "1"
 # Output: "100"

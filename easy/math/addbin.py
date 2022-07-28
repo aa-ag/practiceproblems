@@ -1,5 +1,8 @@
+from email.mime import base
+
+
 def add_binary(a: str, b: str) -> str:
-    return a + b
+    return int(a, base=2) + int(b, base=2)
 
 # Input: a = "11", b = "1"
 # Output: "100"

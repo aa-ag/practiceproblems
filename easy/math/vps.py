@@ -3,7 +3,8 @@ def vps(num: int) -> bool:
     '''
      check if an integer is a valid perfect square
     '''
-    pass
+    return num ** 0.5 
+
 
 # Input: num = 16
 # Output: true

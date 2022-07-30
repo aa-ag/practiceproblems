@@ -1,6 +1,7 @@
+from sympy.ntheory import primefactors
 
 def is_ugly(n: int) -> bool:
-    pass
+    return primefactors(n)
 
 
 # Input: n = 6

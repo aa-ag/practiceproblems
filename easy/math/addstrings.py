@@ -1,5 +1,5 @@
 def add_strings(num1: str, num2: str) -> str:
-    return int(num1) + int(num2)
+    return str(int(num1) + int(num2))
 
 
 # Input: num1 = "11", num2 = "123"

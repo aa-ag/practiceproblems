@@ -2,8 +2,7 @@ from sympy.ntheory import primefactors
 
 def is_ugly(n: int) -> bool:
     pf = primefactors(n)
-    print(pf)
-    return pf == [2,3,5] or pf == []
+    return all((i == 2 or i == 3 or i == 5) for i in pf)
 
 
 # Input: n = 6

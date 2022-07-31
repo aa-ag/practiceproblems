@@ -1,5 +1,5 @@
 def countSegments(s: str) -> int:
-    pass
+    return len(s.split())
 
 
 # Input: s = "Hello, my name is John"

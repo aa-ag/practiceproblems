@@ -1,5 +1,5 @@
 def toHex(num: int) -> str:
-    return hex(num)[2:]
+    return "{0:x}".format(num) if num >= 0 else "{0:x}".format(num + 2 ** 32)
 
 # Input: num = 26
 # Output: "1a"

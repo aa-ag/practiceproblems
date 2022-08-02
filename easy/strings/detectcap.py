@@ -1,12 +1,7 @@
 def dcu(word: str) -> bool:
-    if word == word.title():
+    if word == word.title() or word == word.upper() or word == word.lower():
         return True
-    elif word == word.upper():
-        return True
-    elif word == word.lower():
-        return True
-    else:
-        return False
+    return False
 
 # Input: word = "USA"
 # Output: true

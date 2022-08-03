@@ -1,7 +1,5 @@
 def defang(address: str) -> str:
-    pass
-
-
+    return address.replace(".","[.]")
 
 # Input: address = "1.1.1.1"
 # Output: "1[.]1[.]1[.]1"

@@ -5,7 +5,7 @@ def tm(arr: List[int]) -> float:
     five_percent = int(l * 0.05)
     arr.sort()
     arr =  arr[five_percent:-five_percent]
-    return arr
+    return sum(arr) / len(arr)
 
 # Input: arr = [1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3]
 # Output: 2.00000

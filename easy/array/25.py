@@ -1,7 +1,11 @@
 from typing import List
 
 def fsc(arr: List[int]) -> int:
-    return round(len(arr) * 0.25)
+    threshold = round(len(arr) * 0.25)
+    
+    for i in arr:
+        if arr.count(i) > threshold:
+            return i
 
 
 # Input: arr = [1,2,2,6,6,6,6,7,10]

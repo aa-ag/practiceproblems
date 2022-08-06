@@ -1,7 +1,7 @@
 from typing import List
 
 def fsc(arr: List[int]) -> int:
-    threshold = round(len(arr) * 0.25)
+    threshold = len(arr) * 0.25
     
     for i in arr:
         if arr.count(i) > threshold:

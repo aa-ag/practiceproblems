@@ -1,6 +1,9 @@
 import re
 
 def reformat(number: str) -> str:
+    '''
+     https://leetcode.com/problems/reformat-phone-number/
+    '''
     digits = ''.join(i for i in number if i.isdigit())
 
     answer = ''

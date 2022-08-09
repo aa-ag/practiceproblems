@@ -1,5 +1,8 @@
+import re
+
 def reformat(number: str) -> str:
-    pass
+    digits = ''.join(i for i in number if i.isdigit())
+    return digits
 
 
 # Input: number = "1-23-45 6"

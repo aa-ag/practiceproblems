@@ -1,23 +1,17 @@
-import re
-
 def reformat(number: str) -> str:
-    '''
-     https://leetcode.com/problems/reformat-phone-number/
-    '''
     digits = ''.join(i for i in number if i.isdigit())
 
     answer = ''
 
-    while len(digits):
-        if len(digits) > 4:
-            chunk = digits[:3]
-            answer += chunk + '-'
-            digits = digits[3:]
-        else:
-            chunk = digits[:len(digits)]
-            answer += chunk + '-'
-            digits = digits[2:]
+    while len(digits) > 4:
+        chunk = digits[:3]
+        answer += chunk + '-'
+        digits = digits[3:]
 
+    if len(digits) in (2, 3):
+        answer += digits
+    else:
+        answer += f"{digits[:2]}-{digits[2:]}"
     return answer
 
 

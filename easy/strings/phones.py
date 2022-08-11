@@ -14,7 +14,7 @@ def reformat(number: str) -> str:
             answer += chunk + '-'
             digits = digits[3:]
         else:
-            chunk = digits[:2]
+            chunk = digits[:len(digits)]
             answer += chunk + '-'
             digits = digits[2:]
 

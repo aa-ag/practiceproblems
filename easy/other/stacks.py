@@ -14,4 +14,4 @@ class MyStack:
         return self.stack[-1]
 
     def empty(self) -> bool:
-        self.stack = list()
+        return self.stack == []

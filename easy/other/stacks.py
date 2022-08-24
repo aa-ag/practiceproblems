@@ -12,3 +12,6 @@ class MyStack:
 
     def top(self) -> int:
         return self.stack[-1]
+
+    def empty(self) -> bool:
+        self.stack = list()

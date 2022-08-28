@@ -2,7 +2,14 @@ from email import message
 from typing import List
 
 def lwc(messages: List[str], senders: List[str]) -> str:
-    return dict(zip(senders,messages))
+    d = dict()
+
+    for sender in senders:
+        if sender not in d:
+            d[ sender ] = list()
+    
+    return d
+
 
 
 # Output: "Alice"

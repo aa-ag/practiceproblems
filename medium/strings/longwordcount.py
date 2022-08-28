@@ -8,6 +8,9 @@ def lwc(messages: List[str], senders: List[str]) -> str:
         if sender not in d:
             d[ sender ] = list()
     
+    for i in range(len(messages)):
+        d[ senders[i] ].append( messages[i] )
+
     return d
 
 

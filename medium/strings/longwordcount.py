@@ -1,16 +1,16 @@
 from typing import List
 
 def lwc(messages: List[str], senders: List[str]) -> str:
-    d = dict()
-
-    for sender in senders:
-        if sender not in d:
-            d[ sender ] = 0
+    d = {sender:0 for sender in senders}
     
     for i in range(len(messages)):
         d[ senders[i] ] += len( messages[i].split() )
 
-    return max( d, key=d.get )
+    if list(d.values()).count(d[max( d, key=d.get )]) == 1:
+        return max( d, key=d.get )
+    else:
+        return max(d.keys())
+
 
 
 

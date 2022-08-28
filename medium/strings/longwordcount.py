@@ -11,7 +11,7 @@ def lwc(messages: List[str], senders: List[str]) -> str:
     for i in range(len(messages)):
         d[ senders[i] ] += len( messages[i].split() )
 
-    return d
+    return max( d, key=d.get )
 
 
 

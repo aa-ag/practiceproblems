@@ -6,10 +6,15 @@ def lwc(messages: List[str], senders: List[str]) -> str:
     for i in range(len(messages)):
         d[ senders[i] ] += len( messages[i].split() )
 
-    if list(d.values()).count(d[max( d, key=d.get )]) == 1:
-        return max( d, key=d.get )
-    else:
-        return max(d.keys())
+    maximun = d[ max(d, key=d.get) ]
+    
+    answer = ''
+
+    for k, v in d.items():
+        if v == maximun and answer < k:
+            answer = k
+    
+    return answer
 
 
 

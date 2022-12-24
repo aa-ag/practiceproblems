@@ -2,4 +2,5 @@
 SELECT
     sub_id post_id,
     parent_id number_of_comments
-FROM Submissions;
+FROM Submissions
+WHERE parent_id IS NULL;

@@ -1,6 +1,5 @@
-SELECT salary SecondHighestSalary 
-FROM (SELECT 
-RANK() OVER(ORDER BY salary) place,
-salary
-FROM Employee) a
-WHERE place = 2;
+SELECT (SELECT
+    DISTINCT salary 
+FROM Employee
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1) SecondHighestSalary;

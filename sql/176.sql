@@ -1,5 +1,6 @@
-SELECT 
+SELECT salary SecondHighestSalary 
+FROM (SELECT 
 RANK() OVER(ORDER BY salary) place,
-salary # SecondHighestSalary
-FROM Employee
-ORDER BY salary DESC;
+salary
+FROM Employee) a
+WHERE place = 2;

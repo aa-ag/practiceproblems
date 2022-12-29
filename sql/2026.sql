@@ -1,4 +1,4 @@
 SELECT
     problem_id,
-    (likes + dislikes) votes
+    likes / (likes + dislikes) quality
 FROM Problems;

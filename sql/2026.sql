@@ -1,5 +1,5 @@
 SELECT
-    problem_id,
-    likes / (likes + dislikes) quality
+    problem_id
 FROM Problems
-WHERE likes / (likes + dislikes) < 0.6;
+WHERE likes / (likes + dislikes) < 0.6
+ORDER BY problem_id ASC;

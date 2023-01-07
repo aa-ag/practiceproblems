@@ -1,4 +1,7 @@
-SELECT d.name, e.name, e.salary
+SELECT
+    d.name Department,
+    e.name Employee,
+    e.salary Salary
 FROM Department d
 JOIN Employee e
 ON d.id=e.departmentId

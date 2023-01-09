@@ -1,6 +1,5 @@
 SELECT
-    transaction_id,
-    DATE(day),
-    amount
+    DATE(day) transaction_date,
+    MAX(amount)
 FROM Transactions
-ORDER BY transaction_id ASC;
+GROUP BY transaction_date

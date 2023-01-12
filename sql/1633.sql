@@ -3,4 +3,4 @@ SELECT
     COUNT(*) percentage
 FROM Register
 GROUP BY contest_id
-ORDER BY percentage DESC;
+ORDER BY contest_id ASC;

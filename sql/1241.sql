@@ -6,4 +6,5 @@ SELECT
         WHERE a.sub_id=b.parent_id
     ) number_of_comments
 FROM Submissions a
-WHERE a.parent_id IS NULL;
+WHERE a.parent_id IS NULL
+ORDER BY post_id;

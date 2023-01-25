@@ -1,11 +1,9 @@
 SELECT 
-    accepter_id,
-    COUNT(*) n
+    requester_id AS id,
+    accepter_id AS friend
 FROM RequestAccepted
-GROUP BY accepter_id
 UNION
 SELECT 
-    requester_id,
-    COUNT(*) n
-FROM RequestAccepted
-GROUP BY requester_id;
+    accepter_id AS id,
+    requester_id  AS friend
+FROM RequestAccepted;

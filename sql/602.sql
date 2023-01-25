@@ -1,3 +1,11 @@
-SELECT
-    distinct requester_id AS id
-FROM RequestAccepted;
+SELECT 
+    accepter_id,
+    COUNT(*) n
+FROM RequestAccepted
+GROUP BY accepter_id
+UNION
+SELECT 
+    requester_id,
+    COUNT(*) n
+FROM RequestAccepted
+GROUP BY requester_id;

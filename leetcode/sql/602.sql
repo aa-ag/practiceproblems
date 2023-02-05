@@ -1,6 +1,6 @@
 SELECT
     DISTINCT id,
-    COUNT(DISTINCT friend) friend_count
+    COUNT(DISTINCT friend) num
 FROM
     (SELECT 
         requester_id AS id,
@@ -11,4 +11,6 @@ FROM
         accepter_id AS id,
         requester_id  AS friend
     FROM RequestAccepted) t
-GROUP BY id;
+GROUP BY id
+ORDER BY num DESC
+LIMIT 1;

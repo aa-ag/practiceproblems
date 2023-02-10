@@ -68,3 +68,13 @@ FROM STATION
 WHERE LAT_N > 38.7780
 ORDER BY LAT_N ASC
 LIMIT 1;
+
+SELECT
+    ROUND(
+        ABS(
+            MAX(LONG_W) - MIN(LONG_W)
+        ) + ABS(
+            MAX(LAT_N) - MIN(LAT_N)
+        ),4
+    )
+FROM STATION;

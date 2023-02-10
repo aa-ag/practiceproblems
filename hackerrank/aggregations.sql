@@ -87,3 +87,15 @@ SELECT
             POWER(ABS(MAX(LAT_N) - MIN(LAT_N)),2)
         ),4)
 FROM STATION;
+
+-- https://www.xarg.org/2012/07/statistical-functions-in-mysql/
+SELECT 
+    MEDIAN(LAT_N)
+FROM STATION;
+
+SELECT ROUND(LAT_N,4)
+FROM (
+    SELECT LAT_N,PERCENT_RANK() OVER (ORDER BY LAT_N) AS percentile
+    FROM STATION
+) p 
+WHERE percentile = 0.5;

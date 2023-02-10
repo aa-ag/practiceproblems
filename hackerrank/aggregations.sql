@@ -21,3 +21,11 @@ FROM CITY;
 SELECT
     CEIL(AVG(SALARY) - AVG(REPLACE((SALARY), '0', '')))
 FROM EMPLOYEES;
+
+SELECT
+    (months * salary) earnings,
+    COUNT(*) 
+FROM Employee 
+GROUP BY earnings
+ORDER BY earnings DESC
+LIMIT 1;

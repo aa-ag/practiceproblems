@@ -29,3 +29,8 @@ FROM Employee
 GROUP BY earnings
 ORDER BY earnings DESC
 LIMIT 1;
+
+SELECT
+    ROUND(SUM(LAT_N),2),
+    ROUND(SUM(LONG_W),2)
+FROM STATION;

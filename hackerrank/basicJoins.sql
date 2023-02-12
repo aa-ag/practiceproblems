@@ -34,4 +34,5 @@ ON s.hacker_id=h.hacker_id
 JOIN Challenges c
 ON c.challenge_id=s.challenge_id
 JOIN Difficulty d
-ON d.difficulty_level=c.difficulty_level;
+ON d.difficulty_level=c.difficulty_level
+WHERE s.score=d.score;

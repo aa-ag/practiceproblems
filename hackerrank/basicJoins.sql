@@ -23,7 +23,7 @@ GROUP BY co.CONTINENT;
 
 SELECT 
     DISTINCT s.hacker_id,
-    (SELECT h.name FROM HACKERS WHERE s.hacker_id=h.hacker_id)
+    (SELECT h.name FROM HACKERS h WHERE s.hacker_id=h.hacker_id)
 FROM Submissions s
 JOIN Challenges c
 ON c.challenge_id=s.challenge_id

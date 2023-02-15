@@ -30,4 +30,5 @@ ON c.challenge_id=s.challenge_id
 JOIN Difficulty d
 ON d.difficulty_level=c.difficulty_level
 WHERE s.score=d.score
-GROUP BY s.hacker_id, h.name;
+GROUP BY s.hacker_id, h.name
+HAVING COUNT(*) > 1;

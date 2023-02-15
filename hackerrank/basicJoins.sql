@@ -21,16 +21,13 @@ JOIN CITY ci
 ON ci.COUNTRYCODE=co.CODE
 GROUP BY co.CONTINENT;
 
-WITH cte AS (SELECT s.hacker_id,h.name
-    FROM Submissions s
-    JOIN HACKERS h
-    ON s.hacker_id=h.hacker_id
-    JOIN Challenges c
-    ON c.challenge_id=s.challenge_id
-    JOIN Difficulty d
-    ON d.difficulty_level=c.difficulty_level
-    WHERE s.score=d.score
-    GROUP BY s.hacker_id)
-SELECT *
-FROM cte 
-LIMIT 1;
+SELECT s.hacker_id,h.name
+FROM Submissions s
+JOIN Hackers h
+ON s.hacker_id=h.hacker_id
+JOIN Challenges c
+ON c.challenge_id=s.challenge_id
+JOIN Difficulty d
+ON d.difficulty_level=c.difficulty_level
+WHERE s.score=d.score
+GROUP BY s.hacker_id, h.name;

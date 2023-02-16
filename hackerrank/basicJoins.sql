@@ -33,3 +33,11 @@ WHERE s.score=d.score
 GROUP BY s.hacker_id, h.name
 HAVING COUNT(*) > 1
 ORDER BY COUNT(*) DESC, s.hacker_id ASC;
+
+
+SELECT
+    s.hacker_id,
+    h.name
+FROM Submissions s
+JOIN Hacker h
+ON s.hacker_id=h.hacker_id;

@@ -39,5 +39,5 @@ SELECT
     s.hacker_id,
     h.name
 FROM Submissions s
-JOIN Hacker h
+JOIN Hackers h
 ON s.hacker_id=h.hacker_id;

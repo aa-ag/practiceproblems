@@ -37,11 +37,6 @@ ORDER BY COUNT(*) DESC, s.hacker_id ASC;
 
 SELECT
     s.hacker_id,
-    h.name,
-    SUM(
-    s.score
-    )
+    SUM(MAX(s.score))
 FROM Submissions s
-JOIN Hackers h
-ON s.hacker_id=h.hacker_id
-GROUP BY s.challenge_id;
+GROUP BY s.hacker_id, s.challenge_id

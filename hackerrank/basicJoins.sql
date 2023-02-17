@@ -37,7 +37,7 @@ ORDER BY COUNT(*) DESC, s.hacker_id ASC;
 
 SELECT
     s.hacker_id,
-    h.name
+    h.name,
     s.score
 FROM Submissions s
 JOIN Hackers h

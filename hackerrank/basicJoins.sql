@@ -35,9 +35,13 @@ HAVING COUNT(*) > 1
 ORDER BY COUNT(*) DESC, s.hacker_id ASC;
 
 
-SELECT h.hacker_id,h.name,SUM(a.m)
+SELECT h.hacker_id,h.name,SUM(a.m) s
 FROM (
         SELECT hacker_id,challenge_id,MAX(score) m
         FROM Submissions
-        GROUP BY hacker_id,challenge_id) a
-JOIN HACKERS USING(hacker_id);
+        GROUP BY hacker_id,challenge_id
+     ) a
+JOIN Hackers h ON a.hacker_id=h.hacker_id
+GROUP BY h.hacker_id,h.name
+HAVING SUM(a.m) != 0
+ORDER BY s DESC,h.hacker_id;

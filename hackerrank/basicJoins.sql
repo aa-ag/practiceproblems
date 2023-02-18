@@ -35,10 +35,6 @@ HAVING COUNT(*) > 1
 ORDER BY COUNT(*) DESC, s.hacker_id ASC;
 
 
-SELECT
-    s.hacker_id,
-    h.name,
-    s.score
-FROM Submissions s
-JOIN Hackers h
-WHERE s.hacker_id=h.hacker_id;
+SELECT s.hacker_id,MAX(s.score),s.challenge_id
+FROM Submissions s 
+GROUP BY s.hacker_id,s.challenge_id

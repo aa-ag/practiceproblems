@@ -45,3 +45,10 @@ JOIN Hackers h ON a.hacker_id=h.hacker_id
 GROUP BY h.hacker_id,h.name
 HAVING SUM(a.m) != 0
 ORDER BY s DESC,h.hacker_id;
+
+
+SELECT
+    w.id, wp.age, w.coins_needed, w.power,wp.is_evil
+FROM Wands w
+JOIN Wands_Property wp
+ON w.code=wp.code;

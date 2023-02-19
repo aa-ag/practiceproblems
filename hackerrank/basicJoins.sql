@@ -52,4 +52,5 @@ SELECT
 FROM Wands w
 JOIN Wands_Property wp
 ON w.code=wp.code
+WHERE wp.is_evil = 0
 ORDER BY w.power DESC, wp.age DESC;

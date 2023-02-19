@@ -51,4 +51,5 @@ SELECT
     w.id, wp.age, w.coins_needed, w.power,wp.is_evil
 FROM Wands w
 JOIN Wands_Property wp
-ON w.code=wp.code;
+ON w.code=wp.code
+ORDER BY w.power DESC, w.age DESC;

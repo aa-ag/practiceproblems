@@ -54,3 +54,9 @@ JOIN Wands_Property wp
 ON w.code=wp.code
 WHERE wp.is_evil = 0
 ORDER BY w.power DESC, wp.age DESC;
+
+SELECT
+    h.hacker_id,h.name,c.challenge_id
+FROM Hackers h
+JOIN Challenges c
+ON h.hacker_id=c.hacker_id;

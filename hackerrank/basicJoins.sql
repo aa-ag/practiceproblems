@@ -60,3 +60,13 @@ SELECT
 FROM Hackers h
 JOIN Challenges c
 ON h.hacker_id=c.hacker_id;
+
+
+select
+    case
+        when (A+B<=C) or (B+C<=A) or (A+C<=B) then 'Not A Triangle' 
+        when A=B and B=C and C=A then 'Equilateral'
+        when A=B or B=C or C=A then 'Isosceles'
+        else 'Scalene'
+    end
+from TRIANGLES;

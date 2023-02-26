@@ -6,4 +6,5 @@ ON c.company_code=l.company_code
 JOIN Senior_Manager s
 ON c.company_code=s.company_code
 JOIN Employee e
-ON c.company_code=e.company_code;
+ON c.company_code=e.company_code
+ORDER BY c.company_code ASC;

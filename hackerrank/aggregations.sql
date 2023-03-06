@@ -101,5 +101,6 @@ FROM (
 WHERE percentile = 0.5;
 
 SELECT
-    CONCAT(Name, '(', LEFT(Occupation,1), ')')
-FROM OCCUPATIONS;
+    CONCAT(Name, '(', LEFT(Occupation,1), ')') as 
+FROM OCCUPATIONS
+ORDER BY Name;

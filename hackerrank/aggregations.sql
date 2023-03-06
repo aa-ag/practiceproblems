@@ -99,3 +99,8 @@ FROM (
     FROM STATION
 ) p 
 WHERE percentile = 0.5;
+
+SELECT
+    Name,
+    LEFT(Ocuppation,1)
+FROM OCCUPATIONS;

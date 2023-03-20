@@ -13,3 +13,9 @@ ORDER BY c.company_code;
 
 /* Write a query to output the names 
 of students whose best friends got offered a higher salary than them.*/
+SELECT s.name, f.ID, p.Salary
+FROM Students s
+JOIN Friends f 
+ON s.ID==f.Friend_ID
+JOIN Packages p
+JOIN f.ID==p.ID;

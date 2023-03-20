@@ -103,9 +103,10 @@ WHERE percentile = 0.5;
 SELECT
     CONCAT(Name, '(', LEFT(Occupation,1), ')') as 
 FROM OCCUPATIONS
-ORDER BY Name;
-
+ORDER BY Name
+UNION
 SELECT
     CONCAT('There are a total of ', COUNT(*), ' ', LOWER(Occupation), 's.')
 FROM OCCUPATIONS
-GROUP BY Occupation;
+GROUP BY Occupation
+ORDER BY COUNT(*) ASC,Occupation;

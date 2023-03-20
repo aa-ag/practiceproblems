@@ -10,3 +10,6 @@ JOIN Employee e
 ON c.company_code=e.company_code
 GROUP BY c.company_code,c.founder
 ORDER BY c.company_code;
+
+/* Write a query to output the names 
+of students whose best friends got offered a higher salary than them.*/

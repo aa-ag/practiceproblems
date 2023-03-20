@@ -1,6 +1,3 @@
-# LeetCode
+# HackerRank/LeetCode/etc
 
-Getting started with LeetCode and will be compiling solutions here.
-
-Started with [Top Interview Questions
-](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
+Working thru some interesting problems here.
